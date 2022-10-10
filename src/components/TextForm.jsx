@@ -17,7 +17,7 @@ export default function TextForm(props) {
     console.log("Handle on change")
     setText(event.target.value);
   }
-  const [text, setText] = useState('Enter Some Text Here');
+  const [text, setText] = useState('');
 
   return (
     <>
