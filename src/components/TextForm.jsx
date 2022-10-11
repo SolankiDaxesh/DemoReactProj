@@ -8,15 +8,18 @@ export default function TextForm(props) {
     let newText = text.toUpperCase();
     setText(newText)
   }
+
   const handleLoClick = () => {
     console.log("Upper Case button clicked" + " " + text);
     let newText = text.toLowerCase();
     setText(newText)
   }
+
   const handleOnChange = (event) => {
     console.log("Handle on change")
     setText(event.target.value);
   }
+
   const [text, setText] = useState('');
 
   return (
@@ -38,7 +41,7 @@ export default function TextForm(props) {
       <hr />
       <div className="mb-3 ">
         <h4>Output</h4>
-        <textarea class="form-control" type="text" value={text} placeholder='Enter Some Text Here' disabled readonly />
+        <textarea className="form-control" type="text" value={text} placeholder='Enter Some Text Here' disabled readOnly />
         <hr />
       </div>
     </>
